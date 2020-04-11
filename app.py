@@ -5,7 +5,7 @@ import googlemaps
 matrix = [[0 for x in range(len(place))] for y in range(len(place))] 
 
 #creates instance using the API key
-gmaps = googlemaps.Client(key='AIzaSyAXt4dTGgM-q-JEEFg9CM6B73bxvmsflUQ')
+gmaps = googlemaps.Client(key='')
 
 #use google maps API
 result = gmaps.distance_matrix(place, place, mode="driving", avoid="tolls", units="imperial")
