@@ -1,16 +1,21 @@
 #doc for this API: https://developers.google.com/maps/documentation/distance-matrix/intro#unit_systems
 import googlemaps
 
+#create list of places, and a list of names in the same order
+#please put start to 0, and end to last in list
+place = list(("""input list of latitude and longitude here"""))
+dic = ["""input names for places here, in order with the list above"""]
+
 #matrix to store the distances
 matrix = [[0 for x in range(len(place))] for y in range(len(place))] 
 
 #creates instance using the API key
-gmaps = googlemaps.Client(key='')
+gmaps = googlemaps.Client(key='API_key') #replace API_key with your API key
 
 #use google maps API
 result = gmaps.distance_matrix(place, place, mode="driving", avoid="tolls", units="imperial")
 
-#store results into matrix
+#store results into matrix, units are in meters
 for i in range(len(place)):
     for j in range(len(place)):
         matrix[i][j] = result["rows"][i]["elements"][j]["distance"]["value"]
