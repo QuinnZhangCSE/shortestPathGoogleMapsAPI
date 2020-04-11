@@ -4,7 +4,7 @@ import googlemaps
 #create list of places, and a list of names in the same order
 #please put start to 0, and end to last in list
 place = list(("""input list of latitude and longitude here"""))
-dic = ["""input names for places here, in order with the list above"""]
+name = ["""input names for places here, in order with the list above"""]
 
 #matrix to store the distances
 matrix = [[0 for x in range(len(place))] for y in range(len(place))] 
