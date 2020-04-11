@@ -1,6 +1,12 @@
 # shortestPathGoogleMapsAPI
 Find shortest path between latitude and longitudes using the google maps distance matrix API
 
+4/11/2020:
+
+Finished:
+
+Optimized depth first search algorithm
+
 4/10/2020:
 
 Finished:
