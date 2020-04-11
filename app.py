@@ -13,7 +13,7 @@ matrix = [[0 for x in range(len(place))] for y in range(len(place))]
 gmaps = googlemaps.Client(key='API_key') #replace API_key with your API key
 
 #use google maps API
-result = gmaps.distance_matrix(place, place, mode="driving", avoid="tolls", units="imperial")
+result = gmaps.distance_matrix(place, place, mode="driving", avoid="tolls")
 
 #store results into matrix, units are in meters
 for i in range(len(place)):
@@ -39,13 +39,13 @@ def dfs(stops,visited,path,length,lastStop):
         if i in visited:
             continue
         visited.add(i)
-        dfs(stops,visited,path+dic[i]+"->",length+matrix[lastStop][i],i)
+        dfs(stops,visited,path+name[i]+"->",length+matrix[lastStop][i],i)
         visited.remove(i)
         
 #init for dfs, start at 0
 visitedInit = set()
 visitedInit.add(0)
-pathInit = dic[0] + "->"
+pathInit = name[0] + "->"
 for i in range(1,len(place)-1): #no need to use start and end as second point of dfs
     lengthInit = matrix[0][i]
     dfs(place,visitedInit,pathInit,lengthInit,0)
