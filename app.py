@@ -28,14 +28,16 @@ minLen = float("inf")
 minPath = ""
 
 def dfs(stops,visited,path,length,lastStop):
-    if len(visited) == len(stops) and lastStop == len(place)-1:
+    if len(visited)+1 == len(stops): #if only the last stop is not visited
         global minLen
         global minPath            
+        length = length+matrix[lastStop][len(stops)-1] 
+        path = path+name[len(stops)-1]
         if length < minLen:
             minLen = length
             minPath = path
         return
-    for i in range(len(stops)):
+    for i in range(1,len(stops)-1):
         if i in visited:
             continue
         visited.add(i)
@@ -50,5 +52,5 @@ for i in range(1,len(place)-1): #no need to use start and end as second point of
     lengthInit = matrix[0][i]
     dfs(place,visitedInit,pathInit,lengthInit,0)
     
-print(minPath[:-2])
+print(minPath)
 print(minLen)
