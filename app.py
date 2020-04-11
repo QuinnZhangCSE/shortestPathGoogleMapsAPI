@@ -3,7 +3,7 @@ import googlemaps
 
 #create list of places, and a list of names in the same order
 #please put start to 0, and end to last in list
-place = list(("""input list of latitude and longitude here"""))
+place = ["""input list of latitude and longitude here"""]
 name = ["""input names for places here, in order with the list above"""]
 
 #matrix to store the distances
