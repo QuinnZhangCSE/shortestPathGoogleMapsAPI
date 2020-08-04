@@ -19,7 +19,7 @@ with open('locations.tsv') as tsvfile:
 matrix = [[0 for x in range(len(place))] for y in range(len(place))] 
 
 #creates instance using the API key
-gmaps = googlemaps.Client(key=)
+gmaps = googlemaps.Client(key='API_key') #replace API_key with your API key
 
 elementCount = 0
 for i in range(len(place)):
