@@ -2,7 +2,10 @@
 Find shortest path between latitude and longitudes using the google maps distance matrix API
 
 7/30/2023
+
 To use the program, create a locations.tsv file that contains the latitude and longitude of each location, seperated with the tab character, then run using_ortools.py.
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 4/28/2020
 
