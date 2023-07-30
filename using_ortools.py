@@ -8,12 +8,13 @@ import googlemaps
 import time
 import csv
 
-places = []
+place = []
 
+#parse input file
 with open('locations.tsv') as tsvfile:
   reader = csv.reader(tsvfile, delimiter='\t')
   for row in reader:
-    places.append(row[0].replace(" ",""))
+    place.append(row[0].replace(" ",""))
 
 #matrix to store the distances
 matrix = [[0 for x in range(len(place))] for y in range(len(place))] 
@@ -23,7 +24,7 @@ gmaps = googlemaps.Client(key='API_key') #replace API_key with your API key
 
 elementCount = 0
 for i in range(len(place)):
-    if elementCount + len(place) >= 1000:
+    if elementCount + len(place) >= 1000: #API throttles at 1000 calls/sec
         time.sleep(1)
         elementCount = 0
     #use google maps API
