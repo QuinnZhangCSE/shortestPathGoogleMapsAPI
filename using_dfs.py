@@ -28,7 +28,7 @@ minLen = float("inf")
 minPath = ""
 
 def dfs(stops,visited,path,length,lastStop):
-    if len(visited)+1 == len(stops): #if only the last stop is not visited
+    if len(visited)+1 == len(stops): #if at the last stop
         global minLen
         global minPath            
         length = length+matrix[lastStop][len(stops)-1] 
