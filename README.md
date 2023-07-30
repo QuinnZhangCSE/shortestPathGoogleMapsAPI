@@ -1,6 +1,9 @@
 # shortestPathGoogleMapsAPI
 Find shortest path between latitude and longitudes using the google maps distance matrix API
 
+7/30/2023
+To use the program, create a locations.tsv file that contains the latitude and longitude of each location, seperated with the tab character, then run using_ortools.py.
+
 4/28/2020
 
 This problem has been solved with google OR-Tools. I have two programs, one that finds the route for any amount of vehicles with the attempt to have all vehicles travel the same distance, another with the attempt to have all vehicles with the same number of stops.
